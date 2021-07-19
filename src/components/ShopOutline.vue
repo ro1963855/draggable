@@ -2,24 +2,31 @@
 draggable.HU__shopOutline(
   :list="list"
   item-key="id"
-  ghost-class="HU__shopOutlineItem--ghost"
+  ghost-class="HU__shopOutline__item--ghost"
   handle=".HU__draggable__icon"
   @start="dragging = true"
   @end="dragging = false"
 )
   template(#item="{ element }")
-    ShopOutlineItem(:element="element")
+    component.HU__shopOutline__item(
+      :is="`ShopOutline${element.component}`"
+      :element="element"
+    )
 </template>
 
 <script>
 import draggable from "vuedraggable";
-import ShopOutlineItem from "./ShopOutlineItem.vue";
+import ShopOutlineImage from "./outline_elements/ShopOutlineImage.vue";
+import ShopOutlineBanner from "./outline_elements/ShopOutlineBanner.vue";
+import ShopOutlinePost from "./outline_elements/ShopOutlinePost.vue";
 
 export default {
   name: "ShopOutline",
   components: {
     draggable,
-    ShopOutlineItem,
+    ShopOutlineImage,
+    ShopOutlineBanner,
+    ShopOutlinePost,
   },
   props: {
     list: {
@@ -39,7 +46,12 @@ export default {
 
     &__item {
       line-height: 1.5;
-      margin-left: 8px;
+      margin: 4px 8px;
+
+      &--ghost {
+        opacity: 0.5;
+        background: #c8ebfb;
+      }
     }
   }
 </style>

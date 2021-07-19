@@ -5,7 +5,7 @@
 
 <script>
 import { ref } from "vue";
-import Draggable from "./Draggable.vue";
+import Draggable from "../Draggable.vue";
 
 export default {
   name: "ShopOutlineBanner",

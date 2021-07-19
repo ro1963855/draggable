@@ -22,15 +22,15 @@ export default {
     const list = ref([
       {
         id: 0,
-        component: "ShopOutlineImage",
+        component: "Image",
       },
       {
         id: 1,
-        component: "ShopOutlineBanner",
+        component: "Banner",
       },
       {
         id: 2,
-        component: "ShopOutlinePost",
+        component: "Post",
       },
     ]);
 

@@ -1,14 +1,14 @@
 <template lang="pug">
-.HU__shopOutlinePost
+.HU__shopOutlineImage
   Draggable {{ name }}
 </template>
 
 <script>
 import { ref } from "vue";
-import Draggable from "./Draggable.vue";
+import Draggable from "../Draggable.vue";
 
 export default {
-  name: "ShopOutlinePost",
+  name: "ShopOutlineImage",
   components: {
     Draggable,
   },
@@ -19,7 +19,7 @@ export default {
     },
   },
   setup() {
-    const name = ref("文章");
+    const name = ref("圖庫");
 
     return {
       name,

@@ -29,7 +29,7 @@ export default {
 <style lang="scss" scoped>
   .HU__shopOutlineItem {
     line-height: 1.5;
-    margin-left: 8px;
+    margin: 4px 8px;
 
     &--ghost {
       opacity: 0.5;

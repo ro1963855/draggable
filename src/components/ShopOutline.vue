@@ -3,6 +3,7 @@ draggable.HU__shopOutline(
   :list="list"
   item-key="id"
   ghost-class="HU__shopOutlineItem--ghost"
+  handle=".HU__draggable__icon"
   @start="dragging = true"
   @end="dragging = false"
 )

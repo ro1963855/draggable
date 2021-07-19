@@ -1,13 +1,17 @@
 <template lang="pug">
-.HU__shopOutlineBanner {{ name }}
+.HU__shopOutlineBanner
+  Draggable {{ name }}
 </template>
 
 <script>
 import { ref } from "vue";
+import Draggable from "./Draggable.vue";
 
 export default {
   name: "ShopOutlineBanner",
-  components: {},
+  components: {
+    Draggable,
+  },
   props: {
     element: {
       type: Object,
@@ -25,4 +29,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.HU__shopOutlineBanner {
+  display: flex;
+  justify-content: space-between;
+}
 </style>

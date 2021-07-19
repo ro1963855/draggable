@@ -1,13 +1,17 @@
 <template lang="pug">
-.HU__shopOutlinePost {{ name }}
+.HU__shopOutlinePost
+  Draggable {{ name }}
 </template>
 
 <script>
 import { ref } from "vue";
+import Draggable from "./Draggable.vue";
 
 export default {
   name: "ShopOutlinePost",
-  components: {},
+  components: {
+    Draggable,
+  },
   props: {
     element: {
       type: Object,

@@ -1,10 +1,8 @@
-<template>
-  <div class="HU__app">
-    <Outline class="HU__app__outline">
-      <ShopOutline :list="list" />
-    </Outline>
-    <Main class="HU__app__main"> 456 </Main>
-  </div>
+<template lang="pug">
+.HU__app
+  Outline.HU__app__outline
+    ShopOutline(:list="list")
+  Main.HU__app__main 456
 </template>
 
 <script>
@@ -12,7 +10,6 @@ import { ref } from "vue";
 import Main from "./layouts/Main.vue";
 import Outline from "./layouts/Outline.vue";
 import ShopOutline from "./components/ShopOutline.vue";
-
 
 export default {
   name: "App",

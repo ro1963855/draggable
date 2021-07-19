@@ -1,8 +1,8 @@
-<template>
-  <main class="HU__main">
-    <slot></slot>
-  </main>
+<template lang="pug">
+main.HU__main
+  slot
 </template>
+
 
 <script>
 export default {

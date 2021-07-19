@@ -1,18 +1,13 @@
-<template>
-  <draggable
-    class="HU__shopOutline"
-    :list="list"
-    item-key="name"
-    ghost-class="HU__shopOutline--ghost"
-    @start="dragging = true"
-    @end="dragging = false"
-  >
-    <template #item="{ element }">
-      <div class="list-group-item" :class="{ 'not-draggable': !enabled }">
-        {{ element.name }}
-      </div>
-    </template>
-  </draggable>
+<template lang="pug">
+draggable.HU__shopOutline(
+  :list="list"
+  item-key="name"
+  ghost-class="HU__shopOutline--ghost"
+  @start="dragging = true"
+  @end="dragging = false"
+)
+  template(#item="{ element }")
+    .HU__shopOutline__item {{ element.name }}
 </template>
 
 <script>
@@ -39,7 +34,7 @@ export default {
       background: #c8ebfb;
     }
 
-    > .list-group-item {
+    &__item {
       line-height: 1.5;
       margin-left: 8px;
     }

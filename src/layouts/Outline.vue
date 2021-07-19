@@ -1,7 +1,6 @@
-<template>
-  <aside class="HU__outline">
-    <slot></slot>
-  </aside>
+<template lang="pug">
+aside.HU__outline
+  slot
 </template>
 
 <script>

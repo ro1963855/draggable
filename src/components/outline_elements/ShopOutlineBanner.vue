@@ -28,7 +28,7 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 .HU__shopOutlineBanner {
   display: flex;
   justify-content: space-between;

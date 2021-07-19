@@ -12,7 +12,7 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 .HU__draggable {
   display: flex;
   justify-content: space-between;

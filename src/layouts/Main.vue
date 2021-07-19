@@ -9,7 +9,7 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 .HU__main {
   width: 100%;
   outline: 1px solid gray;

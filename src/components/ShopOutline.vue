@@ -37,7 +37,7 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
   .HU__shopOutline {
     &--ghost {
       opacity: 0.5;

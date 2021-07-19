@@ -3,13 +3,11 @@ main.HU__main
   slot
 </template>
 
-
 <script>
 export default {
   name: "Main",
 };
 </script>
-
 
 <style lang="scss" scoped>
 .HU__main {

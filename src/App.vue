@@ -20,9 +20,18 @@ export default {
   },
   setup() {
     const list = ref([
-      { name: "John", id: 0 },
-      { name: "Joao", id: 1 },
-      { name: "Jean", id: 2 },
+      {
+        id: 0,
+        component: "ShopOutlineImage",
+      },
+      {
+        id: 1,
+        component: "ShopOutlineBanner",
+      },
+      {
+        id: 2,
+        component: "ShopOutlinePost",
+      },
     ]);
 
     return {

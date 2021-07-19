@@ -1,22 +1,24 @@
 <template lang="pug">
 draggable.HU__shopOutline(
   :list="list"
-  item-key="name"
-  ghost-class="HU__shopOutline--ghost"
+  item-key="id"
+  ghost-class="HU__shopOutlineItem--ghost"
   @start="dragging = true"
   @end="dragging = false"
 )
   template(#item="{ element }")
-    .HU__shopOutline__item {{ element.name }}
+    ShopOutlineItem(:element="element")
 </template>
 
 <script>
 import draggable from "vuedraggable";
+import ShopOutlineItem from "./ShopOutlineItem.vue";
 
 export default {
   name: "ShopOutline",
   components: {
     draggable,
+    ShopOutlineItem,
   },
   props: {
     list: {

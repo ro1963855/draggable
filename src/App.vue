@@ -1,26 +1,37 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div class="HU__app">
+    <Outline class="HU__app__outline"> 123 </Outline>
+    <Main class="HU__app__main"> 456 </Main>
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Main from "./layouts/Main.vue";
+import Outline from "./layouts/Outline.vue";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    HelloWorld
-  }
-}
+    Main,
+    Outline,
+  },
+};
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+<style lang="scss" scoped>
+.HU__app {
+  display: flex;
+  flex-direction: row;
+
+  &__outline,
+  &__main {
+    height: 100vh;
+    max-height: 100vh;
+  }
+
+  &__outline {
+    max-width: 300px;
+    flex: 1 1 30%;
+  }
 }
 </style>

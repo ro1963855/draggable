@@ -1,19 +1,36 @@
 <template>
   <div class="HU__app">
-    <Outline class="HU__app__outline"> 123 </Outline>
+    <Outline class="HU__app__outline">
+      <ShopOutline :list="list" />
+    </Outline>
     <Main class="HU__app__main"> 456 </Main>
   </div>
 </template>
 
 <script>
+import { ref } from "vue";
 import Main from "./layouts/Main.vue";
 import Outline from "./layouts/Outline.vue";
+import ShopOutline from "./components/ShopOutline.vue";
+
 
 export default {
   name: "App",
   components: {
     Main,
     Outline,
+    ShopOutline,
+  },
+  setup() {
+    const list = ref([
+      { name: "John", id: 0 },
+      { name: "Joao", id: 1 },
+      { name: "Jean", id: 2 },
+    ]);
+
+    return {
+      list,
+    };
   },
 };
 </script>

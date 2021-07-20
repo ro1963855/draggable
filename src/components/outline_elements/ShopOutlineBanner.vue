@@ -1,16 +1,21 @@
 <template lang="pug">
 .HU__shopOutlineBanner
-  Draggable {{ name }}
+  Expandable
+    template(v-slot:title)
+      Draggable {{ name }}
+    template(v-slot:submenu) 123
 </template>
 
 <script>
 import { ref } from "vue";
 import Draggable from "../Draggable.vue";
+import Expandable from "../Expandable.vue";
 
 export default {
   name: "ShopOutlineBanner",
   components: {
     Draggable,
+    Expandable,
   },
   props: {
     element: {
@@ -30,7 +35,5 @@ export default {
 
 <style lang="scss">
 .HU__shopOutlineBanner {
-  display: flex;
-  justify-content: space-between;
 }
 </style>

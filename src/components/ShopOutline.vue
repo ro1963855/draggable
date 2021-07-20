@@ -46,7 +46,7 @@ export default {
 
     &__item {
       line-height: 1.5;
-      margin: 4px 8px;
+      margin: 8px 24px;
 
       &--ghost {
         opacity: 0.5;

@@ -16,7 +16,9 @@
           Draggable
             .HU__shopOutline__submenu__item {{ `${subTitle}(${subElement.title})` }}
         template(#footer)
-          NewItem.HU__shopOutline__submenu__item {{ addSubTitle }}
+          NewItem.HU__shopOutline__submenu__item(
+            @click="handlePostIncrement"
+          ) {{ incrementTitle }}
 </template>
 
 <script>
@@ -25,6 +27,7 @@ import draggable from "vuedraggable";
 import Draggable from "../Draggable.vue";
 import Expandable from "../Expandable.vue";
 import NewItem from "../NewItem.vue";
+import { addPost } from "../../store/useCMSStore.js";
 
 export default {
   name: "ShopOutlinePost",
@@ -40,15 +43,20 @@ export default {
       required: true,
     },
   },
-  setup() {
+  setup(props) {
     const mainTitle = ref("推薦文");
     const subTitle = ref("文章");
-    const addSubTitle = ref("新增文章");
+    const incrementTitle = ref("新增文章");
+
+    function handlePostIncrement() {
+      addPost(props.element.id)
+    }
 
     return {
       mainTitle,
       subTitle,
-      addSubTitle,
+      incrementTitle,
+      handlePostIncrement,
     };
   },
 };

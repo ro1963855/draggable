@@ -1,9 +1,9 @@
 <template lang="pug">
 .HU__shopOutlineImage
   Expandable
-    template(v-slot:title)
+    template(#title)
       Draggable {{ mainTitle }}
-    template(v-slot:submenu)
+    template(#submenu)
       draggable.HU__shopOutline__submenu(
         :list="element.data.images"
         item-key="id"

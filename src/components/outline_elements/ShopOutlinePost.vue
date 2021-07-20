@@ -1,9 +1,9 @@
 <template lang="pug">
 .HU__shopOutlinePost
   Expandable
-    template(v-slot:title)
+    template(#title)
       Draggable {{ mainTitle }}
-    template(v-slot:submenu)
+    template(#submenu)
       draggable.HU__shopOutline__submenu(
         :list="element.data.posts"
         item-key="id"
@@ -15,6 +15,8 @@
         template(#item="{ element: subElement }")
           Draggable
             .HU__shopOutline__submenu__item {{ `${subTitle}(${subElement.title})` }}
+        template(#footer)
+          NewItem.HU__shopOutline__submenu__item {{ addSubTitle }}
 </template>
 
 <script>
@@ -22,6 +24,7 @@ import { ref } from "vue";
 import draggable from "vuedraggable";
 import Draggable from "../Draggable.vue";
 import Expandable from "../Expandable.vue";
+import NewItem from "../NewItem.vue";
 
 export default {
   name: "ShopOutlinePost",
@@ -29,6 +32,7 @@ export default {
     draggable,
     Draggable,
     Expandable,
+    NewItem,
   },
   props: {
     element: {
@@ -38,11 +42,13 @@ export default {
   },
   setup() {
     const mainTitle = ref("推薦文");
-    const subTitle = ref("推薦文");
+    const subTitle = ref("文章");
+    const addSubTitle = ref("新增文章");
 
     return {
       mainTitle,
       subTitle,
+      addSubTitle,
     };
   },
 };

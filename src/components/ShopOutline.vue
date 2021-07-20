@@ -53,5 +53,13 @@ export default {
         background: #c8ebfb;
       }
     }
+
+    &__submenu {
+      margin: 8px 0 8px 8px;
+
+      &__item {
+        margin: 8px 0;
+      }
+    }
   }
 </style>
